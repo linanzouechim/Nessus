@@ -18,7 +18,7 @@ Ce projet démontre ma capacité à :
 | Machine d’analyse | Kali Linux (VM) |
 | Outil de scan | Nessus Essentials |
 | Machine cible | Metasploitable 2 |
-| Hyperviseur | VMware / VirtualBox |
+| Hyperviseur | VirtualBox |
 | Réseau | NAT ou Host‑Only |
 
 ## 🚀 Étapes réalisées
