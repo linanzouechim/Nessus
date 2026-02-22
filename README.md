@@ -1,106 +1,100 @@
-🛡️ Scan de vulnérabilités avec Nessus
+# 🛡️ Scan de vulnérabilités avec Nessus  
 Analyse de Metasploitable 2 depuis Kali Linux
 
-📌 Description du projet
-Ce laboratoire pratique a été réalisé dans le cadre de ma formation en cybersécurité.
-L’objectif était de mettre en place un environnement contrôlé, d’y installer Nessus Essentials sur une machine Kali Linux, puis d’effectuer un scan de vulnérabilités complet sur une machine cible Metasploitable 2, volontairement vulnérable.
+## 📌 Description du projet
+Ce laboratoire pratique a été réalisé dans le cadre de ma formation en cybersécurité.  
+L’objectif était de mettre en place un environnement contrôlé, d’y installer Nessus Essentials sur une machine Kali Linux, puis d’effectuer un scan de vulnérabilités complet sur une machine cible Metasploitable 2.
 
 Ce projet démontre ma capacité à :
+- Configurer un outil de gestion des vulnérabilités (Nessus)
+- Identifier, analyser et prioriser des failles de sécurité
+- Interpréter les résultats et proposer des mesures correctives
+- Travailler dans un environnement virtualisé et isolé
 
-Configurer un outil de gestion des vulnérabilités (Nessus)
+## 🧰 Environnement utilisé
 
-Identifier, analyser et prioriser des failles de sécurité
+| Composant | Détails |
+|----------|---------|
+| Machine d’analyse | Kali Linux (VM) |
+| Outil de scan | Nessus Essentials |
+| Machine cible | Metasploitable 2 |
+| Hyperviseur | VMware / VirtualBox |
+| Réseau | NAT ou Host‑Only |
 
-Interpréter les résultats et proposer des mesures correctives
+## 🚀 Étapes réalisées
 
-Travailler dans un environnement virtualisé et isolé
+### 1. Installation et configuration de Nessus
+- Téléchargement de Nessus Essentials depuis Tenable
+- Installation sur Kali Linux
+- Activation via clé d’enregistrement
+- Mise à jour des plugins
+- Accès à l’interface Web (port 8834)
 
-🧰 Environnement utilisé
-Composant	Détails
-Machine d’analyse	Kali Linux (VM)
-Outil de scan	Nessus Essentials
-Machine cible	Metasploitable 2
-Hyperviseur	VMware / VirtualBox
-Réseau	NAT ou Host‑Only selon configuration
-🚀 Étapes réalisées
-1. Installation et configuration de Nessus
-Téléchargement de Nessus Essentials depuis Tenable
+  <img width="1092" height="806" alt="image" src="https://github.com/user-attachments/assets/dc47a5da-f469-4c6f-885f-97bc93ee6afd" />
 
-Installation sur Kali Linux
 
-Activation via clé d’enregistrement
+### 2. Préparation de l’environnement
+- Démarrage de Metasploitable 2
+- Vérification de la connectivité réseau (ping, nmap)
+- Identification de l’adresse IP cible
 
-Mise à jour des plugins de détection
+  <img width="898" height="606" alt="image" src="https://github.com/user-attachments/assets/0d02adba-603a-4b4a-afa5-388d1ad4b18e" />
 
-Configuration de l’interface Web (port 8834)
 
-2. Préparation de l’environnement
-Démarrage de Metasploitable 2
+### 3. Création et lancement du scan
+- Création d’un Basic Network Scan
+- Définition de la cible : IP de Metasploitable 2
+- Paramétrage des options
+- Lancement du scan
 
-Vérification de la connectivité réseau (ping, nmap)
+  <img width="717" height="532" alt="image" src="https://github.com/user-attachments/assets/35772547-f692-46fe-8ca2-e9923fcc9301" />
 
-Identification de l’adresse IP cible
+  <img width="1087" height="797" alt="image" src="https://github.com/user-attachments/assets/d840921d-d104-4438-ac15-731a4db27cc9" />
 
-3. Création et lancement du scan
-Création d’un Basic Network Scan
 
-Définition de la cible : IP de Metasploitable 2
+### 4. Résultats 
+- Nombre total de vulnérabilités détectées : 68
+- Critiques : 10
+- Élevées : 6
+- Moyennes : 24
+- Faibles : 9
+  <img width="1087" height="666" alt="image" src="https://github.com/user-attachments/assets/854a605c-0938-4413-9b10-4942770786c1" />
 
-Paramétrage des options (port scan, authentification, intensité)
+  <img width="950" height="526" alt="image" src="https://github.com/user-attachments/assets/36d379f0-1bf7-4126-afd8-1c7aef048a81" />
 
-Lancement du scan et suivi en temps réel
 
-4. Analyse des résultats
+  ### 5. Analyse des résultats
 Nessus a détecté plusieurs vulnérabilités critiques, notamment :
+- VNC avec mot de passe faible
+- Backdoors actives
+- Protocoles SSL obsolètes
+- Services non sécurisés comme Telnet et rlogin
+  
+  <img width="1090" height="797" alt="image" src="https://github.com/user-attachments/assets/cf0548c1-b6dc-4c21-8ce4-0f036ac67a12" />
 
-Services obsolètes (vsftpd, Apache, OpenSSH)
-
-Ports ouverts non sécurisés
-
-Vulnérabilités connues (CVE) exploitables
-
-Failles liées à MySQL, RPC, Telnet, Samba
-
-Mauvaises configurations et mots de passe par défaut
-
-5. Recommandations proposées
-Mise à jour des services et paquets
-
-Désactivation des services inutiles
-
-Renforcement des configurations SSH / FTP
-
-Application de correctifs de sécurité
-
-Segmentation réseau et durcissement du système
-
-📊 Résultats (exemples)
-⚠️ Aucun résultat sensible n’est publié — uniquement des extraits pédagogiques.
-
-Nombre total de vulnérabilités détectées : 60+
-
-Critiques : 10
-
-Élevées : 15
-
-Moyennes : 20
-
-Faibles : 15
-
-📚 Compétences développées
-Gestion des vulnérabilités
-
-Analyse de rapports Nessus
-
-Interprétation des CVE
-
-Évaluation des risques
-
-Mise en place d’un environnement de test sécurisé
-
-Méthodologie SOC / Blue Team
+Ces vulnérabilités peuvent permettre à un attaquant de :
+- Obtenir un accès shell
+- Voler des données
+- Contrôler le système
 
 
-📝 Conclusion
-Ce laboratoire m’a permis de comprendre en profondeur le fonctionnement d’un scan de vulnérabilités, d’interpréter les résultats générés par Nessus et de proposer des mesures de mitigation adaptées.
-Il constitue une base solide pour mes futurs projets en cyberdéfense, gestion des vulnérabilités et analyse SOC.
+### 6. Recommandations proposées
+- Changer les mots de passe faibles en forts
+- Désactivation SSLv2 et SSLv3
+- Supprimer les backdoor
+- Désactivé Telnet et rlogin
+- Mettre à jour le système
+
+  <img width="942" height="550" alt="image" src="https://github.com/user-attachments/assets/970db020-be36-476b-9581-9140d392102d" />
+
+
+
+## 📚 Compétences développées
+- Gestion des vulnérabilités
+- Analyse de rapports Nessus
+- Interprétation des CVE
+- Évaluation des risques
+- Mise en place d’un environnement de test sécurisé
+- Méthodologie SOC / Blue Team
+
+
