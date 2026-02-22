@@ -29,8 +29,8 @@ Ce projet démontre ma capacité à :
 - Activation via clé d’enregistrement
 - Mise à jour des plugins
 - Accès à l’interface Web (port 8834)
-  
-   <img width="640" height="507" alt="image" src="https://github.com/user-attachments/assets/e1da9d06-37ac-4a3c-8389-d26e90dcfe61" />
+
+  <img width="640" height="507" alt="image" src="https://github.com/user-attachments/assets/e1da9d06-37ac-4a3c-8389-d26e90dcfe61" />
 
   <img width="1092" height="806" alt="image" src="https://github.com/user-attachments/assets/dc47a5da-f469-4c6f-885f-97bc93ee6afd" />
 
